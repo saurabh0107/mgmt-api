@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(
    cors({
       credentials: true,
-      origin: "*",
+      origin: "http://localhost:5173" , "https://mgmt-web.netlify.app/"
    })
 );
 
