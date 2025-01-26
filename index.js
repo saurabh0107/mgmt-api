@@ -19,12 +19,11 @@ const jwtSecret = "bsbsfbrnsftentwnnwnwn";
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-   cors({
-      origin: '*', // Allows all origins
-      methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
-      allowedHeaders: ['Content-Type', 'Authorization' , 'access-control-allow-origin'], // Allowed headers
-   }
-   )
+   cors( {
+        origin: '*',  // Replace this with your frontend's URL
+       credentials:false,
+       credentials: true,
+       })
 );
 
 mongoose.connect(process.env.MONGO_URL);
